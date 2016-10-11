@@ -1,0 +1,58 @@
+﻿@using nHibernateWeb.Models
+@model CustomerModel
+@{
+    ViewBag.Title = "EditView";
+    //CustomerModel cusItem = (CustomerModel)ViewData["cusItem"];
+}
+@Styles.Render("~/Content/Site.css")
+<h2>EditView</h2>
+
+<div>
+    <br />
+    <table style="border:1px">
+        <tr>
+            <td>CustomerID</td>
+            <td>@Html.TextBoxFor(o => o.CustomerID)</td>
+        </tr>
+        <tr>
+            <td>CompanyName</td>
+            <td>@Html.TextBoxFor(o => o.CompanyName)</td>
+        </tr>
+        <tr>
+            <td>ContactName</td>
+            <td>@Html.TextBoxFor(o => o.ContactName)</td>
+        </tr>
+        <tr>
+            <td>ContactTitle</td>
+            <td>@Html.TextBoxFor(o => o.ContactTitle)</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>@Html.TextBoxFor(o => o.Address)</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>@Html.TextBoxFor(o => o.City)</td>
+        </tr>
+        <tr>
+            <td>Region</td>
+            <td>@Html.TextBoxFor(o => o.Region)</td>
+        </tr>
+        <tr>
+            <td>PostalCode</td>
+            <td>@Html.TextBoxFor(o => o.PostalCode)</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>@Html.TextBoxFor(o => o.Country)</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>@Html.TextBoxFor(o => o.Phone)</td>
+        </tr>
+        <tr>
+            <td>Fax</td>
+            <td>@Html.TextBoxFor(o => o.Fax)</td>
+        </tr>
+    </table>
+</div>

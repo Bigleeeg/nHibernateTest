@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="nHibernateTest" namespace="nHibernateTest.Entity">
+    <class   name="Orders" table="Orders">
+        
+        <id name="OrderID" column="OrderID" type="int">
+            <generator class="native"/>
+        </id>
+        <property  name="EmployeeID" />
+        <property name="OrderDate" />
+        <property name="RequiredDate" />
+        <property name="ShippedDate" />
+        <property name="ShipVia" />
+        <property name="Freight" />
+        <property name="ShipName" />
+        <property name="ShipAddress" />
+        <property name="ShipCity" />
+        <property name="ShipRegion" />
+        <property name="ShipPostalCode" />
+        <property name="ShipCountry" />
+        <many-to-one name="Customers"  class="Customers">
+            <column name="CustomerID"/>
+        </many-to-one>
+        
+    </class>
+    
+</hibernate-mapping>

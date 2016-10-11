@@ -1,0 +1,45 @@
+﻿@using nHibernateWeb.Models
+
+@{
+    ViewBag.Title = "ListView";
+    List<CustomerModel> cusList = (List<CustomerModel>)ViewData["cusList"];
+}
+@Styles.Render("~/Content/Site.css")
+<h2>ListView</h2>
+<div>
+    <a href="/Customer/EditView">EditView</a>
+    <br />
+    <table style="border:1px">
+        <thead>
+            <tr>
+                <th>CustomerID</th>
+                <th>CompanyName</th>
+                <th>ContactName</th>
+                <th>ContactTitle</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Region</th>
+                <th>PostalCode</th>
+                <th>Country</th>
+                <th>Phone</th>
+                <th>Fax</th>
+            </tr>
+        </thead>
+        @foreach (CustomerModel cus in cusList)
+            {
+            <tr>
+                <td><a href="/Customer/EditView?customerId=@cus.CustomerID">@cus.CustomerID</a></td>
+                <td>@cus.CompanyName</td>
+                <td>@cus.ContactName</td>
+                <td>@cus.ContactTitle</td>
+                <td>@cus.Address</td>
+                <td>@cus.City</td>
+                <td>@cus.Region</td>
+                <td>@cus.PostalCode</td>
+                <td>@cus.Country</td>
+                <td>@cus.Phone</td>
+                <td>@cus.Fax</td>
+            </tr>
+        }
+    </table>
+</div> 
